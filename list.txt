@@ -1,0 +1,10 @@
+How many games are in the file?
+24
+Is there a game from a given year?
+True
+Which was the latest game?
+Diablo III
+How many games do we have by genre?
+6
+What is the line number of the given game (by title)?
+24
