@@ -47,15 +47,18 @@ def get_latest(file_name):
 #4 How many games do we have by genre?
 #Expected name of the function: count_by_genre(file_name, genre)
 #Expected output of the function: a number
-#1 How many games are in the file?
-#Expected name of the function: count_games(file_name)
-#Expected output of the function: a number
-def count_by_genre(file_name):
-    count = 0
-    with open(file_name, "r") as file:
-        for line in file:
-            count += 1
-    return count
+def count_by_genre(file_name, genre):
+    counter = 0
+    game_list = []
+    with open(file_name, "r") as my_file:
+        for lines in my_file:
+            game_list.append(lines.replace('\n', "").split(sep='\t'))
+
+    for game in game_list:
+        if game[3] == genre:
+            counter += 1
+
+    return counter
 
 #5 What is the line number of the given game (by title)?
 #Expected name of the function: get_line_number_by_title(file_name, title)
