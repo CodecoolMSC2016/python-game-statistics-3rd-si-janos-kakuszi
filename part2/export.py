@@ -1,7 +1,7 @@
 from reports import *
 
 def export_results(result):
-    file =open("export.txt", "a+")
+    file =open("reports.txt", "a+")
     file.write(str(result) + "\n")
 
 export_results(str(get_most_played("game_stat.txt")))
